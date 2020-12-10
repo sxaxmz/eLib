@@ -1,0 +1,25 @@
+{% extends 'menu.html' %}
+
+{% block head %}
+<title>eLib | Books</title>
+{% endblock %}
+
+{% block body %}
+    <br><br><br><br>
+<main role="main">
+        <div class="col-sm-8 mx-auto">
+        	<form action='/' method='POST'>
+				<h2 style="display: inline">Books For You: </h2>
+				<input class="float-right" type="text" placeholder="Search Books By Title" aria-label="Search Books By Title" name='searchField' id='searchField'>
+				<button type="submit" class="btn btn-outline-success float-right">Search</button>
+			</form>
+			<hr style="border-top: 3px double;">
+		    {% for book in books %}
+		        <h2>{{book.title}}</h2>
+		        <h2>{{book.isbn}} </h2>
+		        <small>{{ book.author }} : {{ book.yearPublished }}</small>
+		        <hr><br>
+		    {% endfor%}
+    	</div>
+</main>
+{% endblock %}

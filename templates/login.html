@@ -1,0 +1,25 @@
+{% extends 'menu.html' %}
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+    <br><br><br><br>
+<div class="jumbotron">
+  <div class="col-sm-8 mx-auto">
+    <form action='login'  method="POST" >
+      <h2 class="center">Admin Login</h2>
+      <div class="form-group">
+        <label for="id">User ID</label>
+        <input type="text" class="form-control" id="id" name="id" aria-describedby="id" placeholder="Enter User Id" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Enter Password</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password" required>
+      </div>
+        <br>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

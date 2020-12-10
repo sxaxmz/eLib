@@ -1,0 +1,33 @@
+{% extends 'menu.html' %}
+
+{% block head %}
+<title>eLib | Edit Post</title> 
+{% endblock %}
+
+{% block body %}
+<main role="main" class="container">
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+            <h1>Edit Book</h1>
+            <br>
+            <form action='/login/edit/{{book.id}}' method='POST'>
+                Book Title:
+                <input class="form-control" type="text" placeholder="Enter Title" name="title" id="title" aria-label="Enter Title">
+                <br>
+                Book Author:
+                <input class="form-control" type="text" placeholder="Author's name" aria-label="Author's name" name='author' id='author'>
+                <br>
+                Year Published:
+                <input class="form-control" type="text" placeholder="Year Published" aria-label="Year Published" name='yearPublished' id='yearPublished'>
+                <br>
+                ISBN:
+                <input class="form-control" type="text" placeholder="ISBN" aria-label="ISBN" name='isbn' id='isbn'>
+                <br>
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+            <hr>
+        </div>
+    </div>
+</main>
+{% endblock %}
+

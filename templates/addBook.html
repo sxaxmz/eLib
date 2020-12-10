@@ -1,0 +1,32 @@
+{% extends 'menu.html' %}
+
+{% block head %}
+<title>eLib | Add Book</title>
+{% endblock %}
+
+{% block body %}
+<main role="main" class="container">
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+        <h1>Add Book</h1>
+        <form action='/login/addBook' method='POST'>
+            <label>Book Title:</label>
+            <input class="form-control" type="text" placeholder="Enter Title" name="title" id="title" aria-label="Enter Title">
+            <br>
+            <label>Book Author:</label>
+            <input class="form-control" type="text" placeholder="Author's name" aria-label="Author's name" name='author' id='author'>
+            <br>
+            <label>Year Published:</label>
+            <input class="form-control" type="text" placeholder="Year Published" aria-label="Year Published" name='yearPublished' id='yearPublished'>
+            <br>
+            <label>ISBN:</label>
+            <input class="form-control" type="text" placeholder="isbn" aria-label="isbn" name='isbn' id='isbn'>
+            <br>
+            <input type="submit" class="btn btn-success" value="Finish">
+            <input type="reset" class="btn btn-dark" value="Clear">
+            </form>
+            <hr>
+        </div>
+    </div>
+</main>
+{% endblock %}
