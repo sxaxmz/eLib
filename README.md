@@ -1,1 +1,3 @@
 # eLib
+
+![Screenshot](screenshots.gif)
